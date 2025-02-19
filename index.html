@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="shortcut icon" href="img/icon2.png" type="image/x-icon">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- <img src="logo.svg" alt=""> -->
+    <div class="container flex bg-black">
+      <div class="left border">
+        <div class="home bg-gray rounded p10 m5">
+          <div class="flex logo-container">
+            <div class="logo invert pointer"><img src="img/logo.svg" class="pointer" alt="Logo" /></div>
+            <span id="logo-text">Spotify</span>
+            <span class=" x">
+
+              <img src="img/X.svg" class="invert pointer " alt="X">
+            </span>
+          </div>
+          <ul>
+            <li><img src="img/home.svg" class="invert pointer" alt="Home" />Home</li>
+            <li><img src="img/search.svg" class="invert pointer" alt="search" />Search</li>
+          </ul>
+        </div>
+        <div class="library bg-gray p10 m5 rounded">
+          <div class="library-heading">
+            <h2>
+              <img
+                src="img/library.svg"
+                alt="Library"
+                class="library-logo invert"
+              />
+              <span>Your library</span>
+            </h2>
+          </div>
+          <div class="songList">
+            <ul>
+               
+            </ul>
+          </div>
+          <div class="footer">
+            <div>
+              <a
+                href="https://www.spotify.com/in-en/legal/"
+                id=""
+                data-encore-id="textLink"
+              >
+                <span data-encore-id="type">Legal &nbsp;&nbsp;</span>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.spotify.com/in-en/safetyandprivacy/"
+                id=""
+                data-encore-id="textLink"
+              >
+                <span data-encore-id="type"
+                  >Safety&nbsp;&nbsp;Privacy&nbsp;&nbsp; Center</span
+                >
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.spotify.com/in-en/legal/privacy-policy/"
+                id=""
+                data-encore-id="textLink"
+              >
+                <span data-encore-id="type"
+                  >Privacy&nbsp;&nbsp;Policy&nbsp;&nbsp;</span
+                >
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.spotify.com/in-en/legal/cookies-policy/"
+                id=""
+                data-encore-id="textLink"
+              >
+                <span data-encore-id="type">Cookies&nbsp;&nbsp;</span>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"
+                id=""
+                data-encore-id="textLink"
+              >
+                <span data-encore-id="type">About Ads</span>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.spotify.com/in-en/accessibility/"
+                id=""
+                data-encore-id="textLink"
+              >
+                <span data-encore-id="type">&nbsp;&nbsp;Accessibility</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right border bg-gray rounded p10 m5">
+        <div class="header">
+          <div class="nav">
+            <div class="arrow invert">
+              <img src="img/hambarger.svg" class="hambarger pointer" alt="hambarger">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                color="#000000"
+                fill="none"
+              >
+                <path
+                  d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                color="#000000"
+                fill="none"
+              >
+                <path
+                  d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <div class="btns flex">
+              <div class="signbtn">Sign up</div>
+              <div class="logbtn">Log in</div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="playlist">
+            <h1>Spotify Playlist</h1>
+          </div>
+          <div class="cardContainer">
+
+          </div>
+        </div>
+
+        <div class="playbar">
+            <div class="seekbar pointer">
+                <div class="circle pointer">
+
+                </div>
+            </div>
+            <div class="songInfo-playbar"></div>
+            <div class="playbtn">
+                <div class="previusPlay">
+                    <img src="img/previusplay.svg" width="30px" id="previus" class="invert pointer" alt="Previusplay">
+                </div>
+                <div class="playSong">
+                    <img src="img/play.svg" width="30px" id="play" class="invert pointer" alt="play">
+                </div>
+                <div class="nextPlay">
+                    <img src="img/nextplay.svg" width="30px" id="next" class="invert pointer" alt="NextPlay">
+                </div>
+
+            </div>
+            <div class="timevol">
+              <div class="songTime"></div>
+              <div class="volume">
+                <img src="img/volume.svg" class="invert volumeicon pointer" alt="volume">
+                <div class="range">
+                  <input placeholder="range" class="volumerange pointer"  max="100" min="0" type="range" >
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="JS/script.js"></script>
+  </body>
+</html>

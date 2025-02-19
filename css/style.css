@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+   
+}
+:root{
+    --a : 0;
+}
+body {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    margin: 7px;
+}
+
+/* left  */
+.left {
+    width: 25vw;
+    background-color: black;
+}
+
+.right {
+    width: 75vw;
+    position: relative;
+}
+
+.home ul li {
+    font-size: 18px;
+    width: 24px;
+    display: flex;
+    gap: 14px;
+    padding-top: 20px;
+}
+
+#logo-text {
+    padding-left: 41px;
+    font-size: 20px;
+    top: 5px;
+    position: relative;
+}
+
+.library-heading {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 14px;
+}
+
+.library-heading h2 {
+    position: relative;
+}
+
+.library-heading h2 span {
+    position: absolute;
+
+    width: 110px;
+    font-size: 20px;
+    top: 16px;
+    left: 90px;
+}
+
+.library {
+    position: relative;
+    height: 80vh;
+
+}
+
+.library-logo {
+    width: 50px;
+    margin-right: 12px;
+}
+
+.footer {
+    display: flex;
+    font-size: 12px;
+    position: absolute;
+    flex-wrap: wrap;
+    bottom: 10px;
+}
+
+.footer a {
+    color: gray;
+    text-decoration: none;
+}
+
+
+/* right  */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+}
+
+.btns {
+    gap: 20px;
+}
+
+.signbtn {
+    background-color: black;
+    color: gray;
+    padding: 9px 17px 9px 17px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.signbtn:hover {
+    color: white;
+    background-color: #a1a1a117;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.logbtn {
+    background-color: white;
+    color: black;
+    padding: 9px 17px 9px 17px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.logbtn:hover {
+    background-color: rgba(255, 255, 255, 0.535);
+    cursor: pointer;
+    font-size: medium;
+}
+
+.header {
+    background-color: #a1a1a117;
+    border-radius: 10px;
+    height: 45px;
+}
+
+
+/* hambarger  */
+.hambarger {
+    display: none;
+
+}
+
+.playlist {
+    margin: 15px;
+}
+
+.cardContainer {
+    padding: 15px;
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    max-height: 66vh;
+    scroll-behavior: auto;
+    overflow-y: scroll;
+}
+
+.card>* {
+    padding-top: 15px;
+}
+
+.card img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.card p {
+    color: gray;
+}
+
+.card {
+    position: relative;
+    height: 320px;
+    width: 185px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #252525;
+    transition: all 0.6s;
+
+}
+
+.play {
+    position: absolute;
+    right: 20px;
+    bottom: 135px;
+    cursor: pointer;
+}
+.play svg{
+    transition: all 0.6s;
+    opacity: var(--a);
+}
+
+
+/* playbar   */
+.playbar {
+    position: absolute;
+    bottom: 0;
+    bottom: 5px;
+    width: 97%;
+    background-color: rgb(181 187 183 / 11%);
+    height: 70px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 7px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+}
+
+.playbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* song list  */
+
+.songList ul {
+    margin-left: 0px;
+    padding-top: 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.songLogo {
+    margin-right: 18px;
+}
+
+.songLogo img {
+    width: 40px;
+}
+
+.songList ul {
+    height: 55vh;
+    overflow-y: scroll;
+}
+
+.songList ul li {
+    background-color: #403f3f47;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 7px;
+    padding: 13px 5px;
+
+}
+
+.songInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 13px;
+}
+
+.playNow img {
+    width: 30px;
+    position: relative;
+    top: 7px;
+    left: -6px;
+}
+
+/* seekbar  */
+.seekbar {
+    width: 90%;
+    position: absolute;
+    border: 2px solid white;
+    bottom: 7px;
+    border-radius: 10px;
+}
+
+.circle {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    top: -5px;
+    left: 0%;
+    transition: left 0.5s;
+
+}
+
+
+/* crose  */
+.logo-container {
+    position: relative;
+}
+
+.x {
+    position: absolute;
+    right: -6px;
+    top: 1px;
+    width: 36px;
+    display: none;
+}
+
+/* mobile tablets  */
+@media screen and (max-width:768px) {
+    .left {
+        position: absolute;
+        z-index: 100;
+        left: -100%;
+        width: 60vw;
+        transition: all 1s ease-in-out;
+    }
+
+    .right {
+        width: 100vw;
+    }
+
+    .arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .hambarger {
+        position: relative;
+        left: 10px;
+        width: 35px;
+        display: inline;
+        cursor: pointer;
+    }
+
+    .x {
+        display: block;
+    }
+
+    .cardContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        height: 400px;
+        width: 300px;
+        padding: 30px;
+        border-radius: 15px;
+        transition: all 0.8s;
+    }
+
+    .play {
+        right: 50px;
+        bottom: 130px;
+        
+    }
+    
+
+    .container {
+        margin: 0px;
+    }
+
+    .playlist {
+        margin: 30px;
+    }
+
+    .playbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 140px;
+        border-radius: 30px;
+        margin: -3px;
+        padding: 10px;
+        z-index: 50;
+        width: 92%;
+        
+        background-color: rgb(0 0 0 / 93%);
+    }
+
+    .seekbar {
+        bottom: 17px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .left {
+        width: 100%;
+    }
+}
+
+.card:hover {
+    background-color: #79747442;
+    --a:1;
+}
+
+
+.songList ul li:hover {
+    background-color: #c3c0c021;
+}
+
+.songInfo-playbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.songTime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* time valume  */
+.timevol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    flex-direction: column;
+}
+.volume{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.volumerange{
+    width: 100px;
+}
