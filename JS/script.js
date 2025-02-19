@@ -8,7 +8,7 @@ let currfolder;
 
 async function getSongs(folder) {
     currfolder = folder;
-    let a = await fetch(`/${folder}/`);
+    let a = await fetch(`songs/${folder}/`);
     let respons = await a.text();
     let div = document.createElement("div");
     div.innerHTML = respons;
@@ -98,7 +98,7 @@ const strtSong = (track, paused = false) => {
 }
 
 async function displayAlbums() {
-    let a = await fetch(`/songs/`)
+    let a = await fetch(`songs/`)
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -112,7 +112,7 @@ async function displayAlbums() {
             let folder = e.href.split("/").slice(-2)[1];
 
             // get folder matadata
-            let a = await fetch(`/songs/${folder}/info.json`);
+            let a = await fetch(`songs/${folder}/info.json`);
             let respons = await a.json();
 
             cardContainer.innerHTML = cardContainer.innerHTML + `<div class="card pointer" data-folder="${folder}">
