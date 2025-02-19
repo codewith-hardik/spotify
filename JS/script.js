@@ -8,7 +8,7 @@ let currfolder;
 
 async function getSongs(folder) {
     currfolder = folder;
-    let a = await fetch(`http://127.0.0.1:5500/${folder}/`);
+    let a = await fetch(`/${folder}/`);
     let respons = await a.text();
     let div = document.createElement("div");
     div.innerHTML = respons;
@@ -30,7 +30,7 @@ async function getSongs(folder) {
                         <img src="img/music.svg"  class="invert" alt="music">
                     </div>
                     <div class="songInfo">
-                        <div class="songName"> ${song.replaceAll("%20", " ").replaceAll("http://127.0.0.1:5500/songs/", '')}</div>
+                        <div class="songName"> ${song.replaceAll("%20", " ").replaceAll("/songs/", '')}</div>
                         <div class="singer">Hardik</div>
                     </div>
                     <div class="playNow pointer">
@@ -82,7 +82,7 @@ const playMusic = (track, paused = false) => {
         play.src = "img/paused.svg"
 
     }
-    document.querySelector(".songInfo-playbar").innerHTML = `${decodeURI(track).replace("http://127.0.0.1:5500/songs/", '')}`;
+    document.querySelector(".songInfo-playbar").innerHTML = `${decodeURI(track).replace("/songs/", '')}`;
     document.querySelector(".songTime").innerHTML = `00:00 / 00:00`;
 }
 const strtSong = (track, paused = false) => {
@@ -93,7 +93,7 @@ const strtSong = (track, paused = false) => {
         play.src = "img/paused.svg"
 
     }
-    document.querySelector(".songInfo-playbar").innerHTML = `${decodeURI(track).replace("http://127.0.0.1:5500/songs/", '')}`;
+    document.querySelector(".songInfo-playbar").innerHTML = `${decodeURI(track).replace("/songs/", '')}`;
     document.querySelector(".songTime").innerHTML = `00:00 / 00:00`;
 }
 
