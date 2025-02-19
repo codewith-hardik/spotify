@@ -155,7 +155,7 @@ body {
     flex-wrap: wrap;
     max-height: 66vh;
     scroll-behavior: auto;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .card>* {
@@ -238,7 +238,7 @@ body {
 
 .songList ul {
     height: 55vh;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .songList ul li {
