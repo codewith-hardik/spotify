@@ -8,7 +8,7 @@ let currfolder;
 
 async function getSongs(folder) {
     currfolder = folder;
-    let a = await fetch(`songs/${folder}/`);
+    let a = await fetch(`http://127.0.0.1:5500/${folder}/`);
     let respons = await a.text();
     let div = document.createElement("div");
     div.innerHTML = respons;
@@ -30,7 +30,7 @@ async function getSongs(folder) {
                         <img src="img/music.svg"  class="invert" alt="music">
                     </div>
                     <div class="songInfo">
-                        <div class="songName"> ${song.replaceAll("%20", " ").replaceAll("/songs/", '')}</div>
+                        <div class="songName"> ${song.replaceAll("%20", " ").replaceAll("http://127.0.0.1:5500/songs/", '')}</div>
                         <div class="singer">Hardik</div>
                     </div>
                     <div class="playNow pointer">
@@ -82,7 +82,7 @@ const playMusic = (track, paused = false) => {
         play.src = "img/paused.svg"
 
     }
-    document.querySelector(".songInfo-playbar").innerHTML = `${decodeURI(track).replace("/songs/", '')}`;
+    document.querySelector(".songInfo-playbar").innerHTML = `${decodeURI(track).replace("http://127.0.0.1:5500/songs/", '')}`;
     document.querySelector(".songTime").innerHTML = `00:00 / 00:00`;
 }
 const strtSong = (track, paused = false) => {
@@ -93,12 +93,12 @@ const strtSong = (track, paused = false) => {
         play.src = "img/paused.svg"
 
     }
-    document.querySelector(".songInfo-playbar").innerHTML = `${decodeURI(track).replace("/songs/", '')}`;
+    document.querySelector(".songInfo-playbar").innerHTML = `${decodeURI(track).replace("http://127.0.0.1:5500/songs/", '')}`;
     document.querySelector(".songTime").innerHTML = `00:00 / 00:00`;
 }
 
 async function displayAlbums() {
-    let a = await fetch(`songs/`)
+    let a = await fetch(`/songs/`)
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -108,11 +108,11 @@ async function displayAlbums() {
 
     for (let index = 0; index < array.length; index++) {
         const e = array[index];
-        if (e.href.includes("/songs/") && ! e.href.includes( ".htaccess"  )) {
+        if (e.href.includes("/songs/")) {
             let folder = e.href.split("/").slice(-2)[1];
 
             // get folder matadata
-            let a = await fetch(`songs/${folder}/info.json`);
+            let a = await fetch(`/songs/${folder}/info.json`);
             let respons = await a.json();
 
             cardContainer.innerHTML = cardContainer.innerHTML + `<div class="card pointer" data-folder="${folder}">
