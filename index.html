@@ -165,39 +165,67 @@
         </div>
 
         <div class="playbar">
-            <div class="seekbar pointer">
-                <div class="circle pointer">
-
-                </div>
+    <div class="playbar-left">
+        <div class="current-song-info">
+            <img src="" id="song-cover" alt="Cover" class="song-cover">
+            <div class="song-details">
+                <div class="current-song-name">Select a song</div>
+                <div class="current-artist">Artist</div>
             </div>
-            <div class="songInfo-playbar"></div>
-            <div class="playbtn">
-                <div class="previusPlay">
-                    <img src="img/previusplay.svg" width="30px" id="previus" class="invert pointer" alt="Previusplay">
-                </div>
-                <div class="playSong">
-                    <img src="img/play.svg" width="30px" id="play" class="invert pointer" alt="play">
-                </div>
-                <div class="nextPlay">
-                    <img src="img/nextplay.svg" width="30px" id="next" class="invert pointer" alt="NextPlay">
-                </div>
-
-            </div>
-            <div class="timevol">
-              <div class="songTime"></div>
-              <div class="volume">
-                <img src="img/volume.svg" class="invert volumeicon pointer" alt="volume">
-                <div class="range">
-                  <input placeholder="range" class="volumerange pointer"  max="100" min="0" type="range" >
-                </div>
-              </div>
+            <div class="song-actions">
+                <img src="img/like.svg" class="invert pointer like-btn" alt="Like">
             </div>
         </div>
+    </div>
+    
+    <div class="playbar-center">
+        <div class="playbar-controls">
+            <div class="shuffle-control">
+                <img src="img/shuffle.svg" width="20px" id="shuffle" class="invert pointer" alt="Shuffle">
+            </div>
+            <div class="previusPlay">
+                <img src="img/previusplay.svg" width="30px" id="previus" class="invert pointer" alt="Previusplay">
+            </div>
+            <div class="playSong">
+                <img src="img/play.svg" width="35px" id="play" class="invert pointer play-icon" alt="play">
+            </div>
+            <div class="nextPlay">
+                <img src="img/nextplay.svg" width="30px" id="next" class="invert pointer" alt="NextPlay">
+            </div>
+            <div class="repeat-control">
+                <img src="img/repeat.svg" width="20px" id="repeat" class="invert pointer" alt="Repeat">
+            </div>
+        </div>
+        
+        <div class="playbar-progress">
+            <span class="time-elapsed">0:00</span>
+            <div class="seekbar pointer">
+                <div class="progressbar"></div>
+                <div class="circle pointer"></div>
+            </div>
+            <span class="time-total">0:00</span>
+        </div>
+    </div>
+    
+    <div class="playbar-right">
+        <div class="playbar-options">
+            <img src="img/queue.svg" width="20px" class="invert pointer queue-icon" alt="Queue">
+            <img src="img/device.svg" width="20px" class="invert pointer devices-icon" alt="Devices">
+            <div class="volume">
+                <img src="img/volume.svg" class="invert volumeicon pointer" alt="volume">
+                <div class="range">
+                    <div class="volume-bar-container">
+                        <div class="volume-bar"></div>
+                        <div class="volume-dot"></div>
+                    </div>
+                    <input placeholder="range" class="volumerange pointer" max="100" min="0" type="range">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
       </div>
     </div>
-
-
-
 
     <script src="JS/script.js"></script>
   </body>
